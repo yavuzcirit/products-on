@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
@@ -17,6 +18,8 @@ const ProductCard: React.FC<propsType> = ({
   rating,
   price,
 }) => {
+  // const imgLink = img.split('/')[img.split('/')?.length - 1]; 
+
   const generateRating = (rating: number) => {
     switch (rating) {
       case 1:
@@ -78,7 +81,7 @@ const ProductCard: React.FC<propsType> = ({
   return (
     <div className="px-4 border border-gray-200 rounded-xl max-w-[400px]">
       <div>
-        <img
+        <Image
           className="w-full h-auto"
           src={img}
           width={200}
