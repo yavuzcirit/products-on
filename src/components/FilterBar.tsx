@@ -10,7 +10,7 @@ const FilterBar = ({ onFilterChange }: { onFilterChange: (filter: any) => void }
   });
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFilter((prevFilter) => ({ ...prevFilter, [event.target.name]: event.target.value }));
+    setFilter((prevFilter) => ({ ...prevFilter, [event.target.name]: event.target.value.toUpperCase() }));
   };
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
